@@ -16,8 +16,18 @@ body{
     border-radius: 1em;
 
 }
+.inner{
+    display: flex;
+    width: 8em;
+    justify-content: space-between;
+    align-items: center;
+}
+.inner h3{
+    cursor: pointer;
+    
+}
 
-.list div{
+.outer{
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -12,8 +12,12 @@ button.addEventListener("click", () => {
         const newtask = document.createElement('div')
         newtask.innerHTML = `
             <h2> ${text.value} </h2>
+            <div class="inner">
+            <h3> Edit </h3>
             <button> Delete </button>
+            </div>
         `
+        newtask.classList.add("outer")
         container.appendChild(newtask)
         text.value = ""
     }
@@ -24,6 +28,11 @@ button.addEventListener("click", () => {
 
 container.addEventListener("click", (e) => {
     if (e.target.tagName === 'BUTTON'){
-        e.target.parentElement.remove();
+        e.target.parentElement.parentElement.remove();
+    }
+    else if (e.target.tagName === 'H3'){
+        const edittask = prompt('Enter new task:')
+        const tex = e.target.parentElement.parentElement
+        tex.children[0].textContent = edittask
     }
 })
