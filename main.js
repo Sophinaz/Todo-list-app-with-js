@@ -9,13 +9,21 @@ button.addEventListener("click", () => {
     if (text.value) {
         tasks.push(text.value)
         
-        const newtask = document.createElement('h2')
-        newtask.innerHTML = `${text.value}`
+        const newtask = document.createElement('div')
+        newtask.innerHTML = `
+            <h2> ${text.value} </h2>
+            <button> Delete </button>
+        `
         container.appendChild(newtask)
         text.value = ""
     }
+    else{
+        alert("please insert a task")
+    }
 })
 
-element.addEventListener("click", () => {
-    // alert("s")
+container.addEventListener("click", (e) => {
+    if (e.target.tagName === 'BUTTON'){
+        e.target.parentElement.remove();
+    }
 })
