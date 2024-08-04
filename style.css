@@ -7,16 +7,29 @@ body{
 
 .list{
     height: fit-content;
-    width: 55%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(32, 32, 105);
+    border-radius: 1em;
+
 }
-.list h2{
-    background-color: rgba(115, 127, 160, 0.993);
+
+.list div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgba(115, 127, 160, 0.993); */
     padding: 0.2em;
+    width: 60%;
+    /* margin: 2em; */
+}
+
+.list button{
+    height: 3em;
+    width: 5em;
 }
 
 .main{
@@ -31,7 +44,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4em;
+    margin-bottom: 0.3em;
     width: 35%;
 }
 
