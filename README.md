@@ -1,3 +1,4 @@
+<h1>Description</h1>
 This is a todo list app which lets you add tasks to do and delete them after they are completed.
 
 The page without adding any tasks looks like this:
